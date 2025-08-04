@@ -57,10 +57,6 @@ async fn main() -> Result<()> {
 cargo run --example subscribe
 ```
 
-## MEVBlocker Documentation
-
-For more information about MEVBlocker's RPC methods, see: https://docs.cow.fi/mevblocker/searchers/listening-for-transactions
-
 ## License
 
 Licensed under MIT license.
