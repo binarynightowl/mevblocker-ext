@@ -1,0 +1,48 @@
+[package]
+name = "mevblocker-ext"
+version = "0.1.0"
+edition = "2021"
+description = "Alloy RPC extension for MEVBlocker transaction subscriptions"
+license = "MIT"
+repository = "https://github.com/binarynightowl/mevblocker-ext"
+
+[lib]
+name = "mevblocker_ext"
+path = "src/lib.rs"
+
+[[example]]
+name = "subscribe"
+path = "examples/subscribe.rs"
+
+[features]
+default = ["pubsub"]
+pubsub = ["alloy/pubsub"]
+
+[dependencies]
+alloy = { version = "1.0.23", features = [
+    "eips",
+    "full",
+    "json-rpc",
+    "node-bindings",
+    "pubsub",
+    "rpc-client",
+    "rpc-types-debug",
+    "rpc-types-trace",
+    "signer-aws",
+    "signer-gcp",
+    "signer-keystore",
+    "signer-ledger",
+    "signer-mnemonic",
+    "signer-trezor",
+    "signer-yubihsm",
+    "rpc-types-admin",
+    "provider-mev-api",
+] }
+
+# async
+async-trait = "0.1.88"
+futures-util = "0.3"
+tokio = { version = "1.45", features = ["rt-multi-thread", "macros"] }
+
+# misc
+eyre = "0.6"
