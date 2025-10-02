@@ -19,7 +19,7 @@ default = ["pubsub"]
 pubsub = ["alloy/pubsub"]
 
 [dependencies]
-alloy = { version = "1.0.23", features = [
+alloy = { version = "1.0", features = [
     "eips",
     "full",
     "json-rpc",
